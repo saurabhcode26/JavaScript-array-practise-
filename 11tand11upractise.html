@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reverse of a array</title>
+</head>
+<body>
+    <script>
+        function removeEggs(foods){
+            const foodsCopy = foods.slice();
+            const reverseFoods = foods.reverse();
+            const result=[];
+            let eggsremoved=0;
+            for (let i=0 ; i<reverseFoods.length;i++){
+                if(reverseFoods[i] === 'eggs' && eggsremoved<2){
+                   eggsremoved++;
+                   continue;
+
+                }
+                result.push(reverseFoods[i]);
+
+            }
+            return result;
+
+        }
+        console.log(removeEggs(['hi','hello','eggs','eggs','eggs']));
+        console.log(removeEggs(foods));
+        console.log(foods);
+    </script>
+</body>
+</html>

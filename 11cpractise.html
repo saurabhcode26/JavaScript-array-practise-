@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swpping of numbers</title>
+</head>
+<body>
+    <script>
+        function arrayswap(array){
+            const lastelment = array.length-1;
+            const lastarray = array[lastelment];
+            const firstarray = array[0];
+            array[0] = lastarray;
+            array[lastelment]= firstarray;
+            return array;
+
+        }
+        console.log(arrayswap([23,343,435,534]));
+    </script>
+</body>
+</html>

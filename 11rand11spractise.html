@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>egg is removed</title>
+</head>
+<body>
+    <script>
+        function removeEggs(foods){
+             const result=[];
+             let eggsremoved=0;
+            for(let i=0;i<foods.length;i++){
+                if (foods[i] === 'eggs' && eggsremoved<2){
+                     // Update the number of 'egg' we have removed.
+            // This must be done before continue, otherwise,
+            // doing continue first will just skip this code.
+                    eggsremoved++;
+                    continue;
+                }
+
+                result.push(foods[i]);
+
+            }
+            return result;
+        }
+        console.log(removeEggs(['eggs','fds','eggs','eggs']));
+    </script>
+</body>
+</html>
